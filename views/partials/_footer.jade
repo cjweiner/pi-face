@@ -1,0 +1,18 @@
+footer(class='page-footer orange')
+	div(class='container')
+		div(class='row')
+			div(class='col 16 s12')
+				h5(class='white-text')=bioTitle
+				p(class='grey-text text-lighten-3')=bioDesc
+			div(class='col 13 s12')
+				h5(class='white-text')='Site Links'
+				ul
+					-var routes = appLinks
+					-if(routes !== undefined)
+					-for(var i=0; i<routes.length;i++)
+						li
+							a(href=routes[i].path, class='white-text' )= routes[i].name
+	div(class='footer-copyright')
+		div(class='container')='©2015 Corey Weiner'
+			div(class='right')='Made with '
+				a(class='orange-text text-lighten-3' href='http://materializecss.com')='Materialize'

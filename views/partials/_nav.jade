@@ -1,0 +1,14 @@
+nav(class='orange' role='navigation')
+	div(class='container')
+		div(class='nav-wrapper')
+			a(id='logo-container' href='/' class='brand-logo')= "Pi-face"
+			ul(class='right')
+				-var routes = appLinks
+				-if(routes !== undefined)
+					-for(var i=0; i<routes.length;i++)
+						-if(routes[i].active)
+							li(class='active')
+								a(href=routes[i].path )= routes[i].name
+						-else
+							li
+								a(href=routes[i].path )= routes[i].name

@@ -1,0 +1,38 @@
+extends layout
+
+block content
+	div(class='section no-pad-bot' id='index-banner')
+		div(class='container')
+			div(class='row center')
+				a(href='/' )
+					img(src='images/logo.png' class='responsive-img')
+			div(class='row center')
+				h5(class='header col s12 light')= siteDesc
+			br
+	div(class='container')
+		div(class='section')
+			div(class='row')
+				div(class='col s12 m4')
+					div(class='icon-block')
+						h2(class='center light-blue-text')
+							i(class='mdi-file-cloud')
+						h5(class='center')='Weather Center'
+						p(class='light left-align')='Get the weather so you don\'t get caught in the next blizzard wearing sandals! You can even send it to the connected LED Matrix!'
+						div(class='center')
+							a(href='weather' id='weather-button' class='btn-large waves-effect waves-light orange')='Is it Sunny?'
+				div(class='col s12 m4')
+					div(class='icon-block')
+						h2(class='center light-blue-text')
+							i(class='mdi-image-grid-on')
+						h5(class='center')='Game Center'
+						p(class='light left-align')='Start a game of Conway\'s Game of Life and see how life plays out in front of your eyes or start it up on the connected LED Matrix!'
+						div(class='center')
+							a(href='game' id='message-button' class='btn-large waves-effect waves-light orange')='Start'
+				div(class='col s12 m4')
+					div(class='icon-block')
+						h2(class='center light-blue-text')
+							i(class='mdi-communication-message')
+						h5(class='center')='Message Center'
+						p(class='light left-align')='Let your friend/room mate/significant other know that you need them to run to the store by sending a message to the connected LED matrix.'
+						div(class='center')
+							a(href='message' id='message-button' class='btn-large waves-effect waves-light orange')='Get Started'
