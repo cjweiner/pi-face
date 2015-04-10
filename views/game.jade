@@ -1,1 +1,23 @@
 extends layout
+block content
+	div(class='container')
+		div(class='section')
+			div(class='row')
+				div(class='col l12')
+					h2(class='center light-blue-text')='Conway\'s Game of Life'
+			div(class='row')
+				div(class='col l12')
+					canvas(id='myCanvas' resize)
+			div(class='row center')
+				div(class='col show-on-medium-and-up m4 4') &nbsp;
+				div(class="col s12 m2 2")
+					a(class='waves-effect waves-light btn-large' onclick='init();')
+						i(class='mdi-av-play-arrow')='Start'
+				div(class="col s12 m2 2")
+					a(class='waves-effect waves-light btn-large')
+						i(class='mdi-av-stop')='Stop'
+				div(class='col show-on-medium-and-up m4 4') &nbsp;
+
+
+	script(src='paper/dist/paper-full.js')
+	script(src='javascripts/game.js')

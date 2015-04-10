@@ -1,4 +1,4 @@
-var Cell = function(position){
+var Cell = function(position, point){
     this.position = position;
-    this.
+    this.point = point;
 };

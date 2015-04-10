@@ -1,5 +1,6 @@
 var express = require('express');
 var url = require('url');
+var paper = require('paper');
 var router = express.Router();
 
 
@@ -42,7 +43,7 @@ router.get('/dashboard',function(req,res,next) {
 });
 
 router.get('/game',function(req,res,next) {
-   res.render('game');
+    res.render('game');
 });
 
 router.get('/weather',function(req,res,next) {
