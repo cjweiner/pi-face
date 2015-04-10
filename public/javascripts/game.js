@@ -1,8 +1,4 @@
-/**
- * Created by CWeiner on 4/10/2015.
- */
-
-var drawGrid = function(num_rectangles_wide, num_rectangles_tall, boundingRect, canvasObj, canvasHeight, canvasWidth) {
+var drawGrid = function (num_rectangles_wide, num_rectangles_tall, boundingRect, canvasObj, canvasHeight, canvasWidth) {
     canvasObj.width = canvasHeight;
     canvasObj.height = canvasWidth;
     var width_per_rectangle = 19;
@@ -17,9 +13,9 @@ var drawGrid = function(num_rectangles_wide, num_rectangles_tall, boundingRect, 
             aRect.fillColor = 'white';
         }
     }
-}
+};
 
-var fillCell = function(event) {
+var fillCell = function (event) {
     var hitOptions = {
         fill: true,
         tolerance: 5
@@ -38,7 +34,7 @@ var fillCell = function(event) {
     }
 };
 
-var fillCells = function(event){
+var fillCells = function (event) {
 
     var hitOptions = {
         fill: true,
@@ -52,17 +48,16 @@ var fillCells = function(event){
         hitResult.item.fillColor = 'grey';
         hitResult.item.clicked = true;
     }
-}
+};
 
-paper.install(window);
-var init = function() {
+var init = function () {
     var canvas = document.getElementById('myCanvas');
     paper.setup(canvas);
 
     var tool = new Tool();
-    tool.onMouseDown = fillCell;
     tool.fixedDistance = 10;
+    tool.onMouseDown = fillCell;
     tool.onMouseDrag = fillCells;
 
     drawGrid(64, 32, paper.view.bounds, canvas, 1240, 475);
-}
+};

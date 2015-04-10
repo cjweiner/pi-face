@@ -7,17 +7,23 @@ block content
 					h2(class='center light-blue-text')='Conway\'s Game of Life'
 			div(class='row')
 				div(class='col l12')
-					canvas(id='myCanvas' resize)
+					canvas(id='myCanvas' resize='true' width='1240' height='475')
 			div(class='row center')
 				div(class='col show-on-medium-and-up m4 4') &nbsp;
 				div(class="col s12 m2 2")
-					a(class='waves-effect waves-light btn-large' onclick='init();')
-						i(class='mdi-av-play-arrow')='Start'
+					a(class='waves-effect waves-light btn-large' onclick='')='Start'
+						i(class='mdi-av-play-arrow left')
 				div(class="col s12 m2 2")
-					a(class='waves-effect waves-light btn-large')
-						i(class='mdi-av-stop')='Stop'
+					a(class='waves-effect waves-light btn-large')='Stop'
+						i(class='mdi-av-stop left')
 				div(class='col show-on-medium-and-up m4 4') &nbsp;
 
 
+
 	script(src='paper/dist/paper-full.js')
-	script(src='javascripts/game.js')
+	script(src='javascripts/game.js' canvas='myCanvas')
+	script.
+		paper.install(window);
+		$(document).ready(function () {
+			init();
+		});
