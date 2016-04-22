@@ -8,8 +8,8 @@ html(lang='en')
 		link(href='stylesheets/style.css', type='text/css', rel='stylesheet', media='screen,projection')
 		script(src='javascripts/jquery-2.1.1.min.js')
 	body
-		include ./partials/_nav
+		include ./partials/_nav.pug
 		main
 			block content
-		include ./partials/_footer
+		include ./partials/_footer.pug
 		script(src="javascripts/materialize.js")
